@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card App</title>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body onload="getRandomWord()">
+    <div class="container">
+        <h1 class="title">Flash Card App</h1>
+
+        <div class="flashcard">
+            <div class="input-section">
+                <label for="termInput">Term:</label>
+                <input type="text" id="termInput" placeholder="Enter term">
+
+                <label for="definitionInput">Definition:</label>
+                <input type="text" id="definitionInput" placeholder="Enter definition">
+
+                <button class="add" onclick="addWord()">Add Flashcard</button>
+            </div>
+
+            <div class="card">
+                <div class="term">
+                    <h3 id="termText">Term</h3>
+                </div>
+            
+                <div class="definition show">
+                    <h3 id="definitionText">Definition</h3>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="check" onclick="checkDefinition()">Check Definition</button>
+                <button class="next" onclick="getRandomWord()">Next Definition</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/app.js"></script>
+</body>
+
+</html>
